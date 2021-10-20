@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="filters">
+            <div class="search-date">
+                <input type="text" class="input-forms" id="date-picker" value="2020/01/01 - 2020/01/01">
+                <div class="img-cont calendar">
+                    <img class="cal-icon" src="./assets/icon_calender.svg" alt="calendar icon">
+                </div>
+                <div class="img-cont search">
+                    <img class="search-icon" src="./assets/icon_search.svg" alt="search icon">
+                </div>
+                
+            </div>
+            <div class="search-filter" >
+                <input type="text" class="input-forms" id="search-table" placeholder="Search email">
+                <div class="img-cont search filter" id="search-btn">
+                    <img class="search-icon"  src="./assets/icon_search.svg" alt="search icon">
+                </div>
+                
+            </div>
+        </div>
+        <div class="email-container">
+            <div class="results">
+                Results: <span class="res-num">0</span> mail(s)
+            </div>
+            <div class="table-container">
+                <table id="email-table">
+                    <thead>
+                        <tr class="table-headers">
+                            <th>From <span class="up-arrow"><img src="./assets/icon_arrow01.svg" alt="arrow icon"></span></th>
+                            <th>To <span class="up-arrow"><img src="./assets/icon_arrow01.svg" alt="arrow icon"></span></th>
+                            <th>Subject <span class="up-arrow"><img src="./assets/icon_arrow01.svg" alt="arrow icon"></span></th>
+                            <th>Date <span class="up-arrow"><img src="./assets/icon_arrow01.svg" alt="arrow icon"></span></th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body">
+                        <tr class="email-content">
+                            <td class="from"><span class="mail-icon"><img src="./assets/icon_mail_sp.svg" alt="mail icon"></span> <p>aaa@example.com</p></td>
+                            <td class="to"><div class="recipient"><p class="overflow">zzz.zzz@example.com</p></div></td>
+                            <td class="subject">[HR-888] Notice of official announcement</td>
+                            <td class="date">0:20 <span class="right-arrow"><img src="./assets/icon_arrow02.svg" alt="right arrow icon"></span></td>
+                        </tr>
+                        <tr class="email-body">
+                            <td colspan="4">
+                                <div class="email-body-text">
+                                    <ul>
+                                        <li><p class="bold-text">From: </p><p class="email-from"></p></li>
+                                        <li><p class="bold-text">To: </p><p class="email-to"></p></li>
+                                        <li><p class="bold-text">Subject: </p><p class="email-subject"></p></li>
+                                        <li><p class="email-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis nesciunt doloribus modi tempore fugit hic commodi eius, necessitatibus dolore, vitae nisi. Repellat commodi sint suscipit magnam ad ut ipsa cupiditate.</p></li>
+                                        <li class="time-li"><p class="bold-text">Time: </p><p class="email-date"></p></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="table-body">
+                        <tr class="email-content">                           
+                            <td class="from"><span class="mail-icon"><img src="./assets/icon_mail_sp.svg" alt="mail icon"></span><p>bbb.bbbb@example.com</p></td>
+                            <td class="to"><div class="recipient"><p class="overflow">yyy@example.com</p></div></td>
+                            <td class="subject">[web:333] "Web Contact"</td>
+                            <td class="date">0:10<span class="right-arrow"><img src="./assets/icon_arrow02.svg" alt="right arrow icon"></span></td> 
+                        </tr>
+                        <tr class="email-body">
+                            <td colspan="4">
+                                <div class="email-body-text">
+                                    <ul>
+                                        <li><p class="bold-text">From: </p><p class="email-from"></p></li>
+                                        <li><p class="bold-text">To: </p><p class="email-to"></p></li>
+                                        <li><p class="bold-text">Subject: </p><p class="email-subject"></p></li>
+                                        <li><p class="email-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, aut sapiente eos non perferendis qui omnis reprehenderit iure provident debitis ducimus a, consectetur cum sint explicabo officia unde nostrum illum!</p></li>
+                                        <li class="time-li"><p class="bold-text">Time: </p><p class="email-date"></p></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="table-body">
+                        <tr class="email-content">                
+                            <td class="from"><span class="mail-icon"><img src="./assets/icon_mail_sp.svg" alt="mail icon"></span><p>ccc@example.com</p></td>
+                            <td class="to"><div class="recipient"><p class="overflow">xxx@example.com, wwww.www@example.com</p></div> <span class="hidden-email">+1</span></td>
+                            <td class="subject">Happy New Year! Greetings for the New Year.</td>
+                            <td class="date"><span class="clip"><img src="./assets/icon_clip.svg" alt="clip icon"></span>0:00<span class="right-arrow"><img src="./assets/icon_arrow02.svg" alt="right arrow icon"></span></td>
+                        </tr>
+                        <tr class="email-body">
+                            <td colspan="4">
+                                <div class="email-body-text">
+                                    <ul>
+                                        <li><p class="bold-text">From: </p><p class="email-from"></p></li>
+                                        <li><p class="bold-text">To: </p><p class="email-to"></p></li>
+                                        <li><p class="bold-text">Subject: </p><p class="email-subject"></p></li>
+                                        <li><p class="email-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed obcaecati doloremque doloribus ex dolorum ratione provident, itaque facere, ipsa fuga aspernatur, qui error ipsum! Nihil labore dolorum atque hic maxime!</p></li>
+                                        <li class="time-li"><p class="bold-text">Time: </p><p class="email-date"></p></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="table-body">
+                        <tr class="email-content"> 
+                            <td class="from"><span class="mail-icon"><img src="./assets/icon_mail_sp.svg" alt="mail icon"></span><p>ddd.dddd@example.com</p></td>
+                            <td class="to"><div class="recipient"><p class="overflow">vvv.vvv@example.com, uuu@example.com, www@example.com</p></div> <span class="hidden-email">+1</span></td>
+                            <td class="subject">[HR-887(Revised: Office Expansion Project Team)] Notice of off..</td>
+                            <td class="date">Jan 01<span class="right-arrow"><img src="./assets/icon_arrow02.svg" alt="right arrow icon"></span></td>
+                        </tr>
+                        <tr class="email-body">
+                            <td colspan="4">
+                                <div class="email-body-text">
+                                    <ul>
+                                        <li><p class="bold-text">From: </p><p class="email-from"></p></li>
+                                        <li><p class="bold-text">To: </p><p class="email-to"></p></li>
+                                        <li><p class="bold-text">Subject: </p><p class="email-subject"></p></li>
+                                        <li><p class="email-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et architecto iure voluptas, deleniti beatae repellat quam necessitatibus quia neque maxime dolorem culpa, quisquam repudiandae, asperiores ea minus laborum ullam omnis!</p></li>
+                                        <li class="time-li"><p class="bold-text">Time: </p><p class="email-date"></p></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="table-body">        
+                        <tr class="email-content">  
+                            <td class="from"><span class="mail-icon"><img src="./assets/icon_mail_sp.svg" alt="mail icon"></span><p>eee@example.com</p></td>
+                            <td  class="to"><div class="recipient"><p class="overflow">sss@example.com, rrr.rrrr@example.com, ttt@example.com</p></div><span class="hidden-email">+2</span></td>
+                            <td class="subject">[Github] Logout page</td>
+                            <td class="date">Jan 01<span class="right-arrow"><img src="./assets/icon_arrow02.svg" alt="right arrow icon"></span></td>
+                        </tr>
+                        <tr class="email-body">
+                            <td colspan="4">
+                                <div class="email-body-text">
+                                    <ul>
+                                        <li><p class="bold-text">From: </p><p class="email-from"></p></li>
+                                        <li><p class="bold-text">To: </p><p class="email-to"></p></li>
+                                        <li><p class="bold-text">Subject: </p><p class="email-subject"></p></li>
+                                        <li><p class="email-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt excepturi nulla porro id facere recusandae quia enim voluptas a. Earum, esse molestiae. Distinctio qui officiis dicta sit magni quisquam tenetur!</p></li>
+                                        <li class="time-li"><p class="bold-text">Time: </p><p class="email-date"></p></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="table-body">    
+                        <tr class="email-content">
+                            <td class="from"><span class="mail-icon"><img src="./assets/icon_mail_sp.svg" alt="mail icon"></span><p>fff.ffff@example.com</p></td>
+                            <td class="to"><div class="recipient"><p class="overflow">qqq.qqq@example.com</p></div></td>
+                            <td class="subject">[dev] Postfix 3.1.12 / 3.2.9 / 3.3.4 / 3.4.5</td>
+                            <td class="date">Jan 01<span class="right-arrow"><img src="./assets/icon_arrow02.svg" alt="right arrow icon"></span></td>
+                        </tr>
+                        <tr class="email-body">
+                            <td colspan="4">
+                                <div class="email-body-text">
+                                    <ul>
+                                        <li><p class="bold-text">From: </p><p class="email-from"></p></li>
+                                        <li><p class="bold-text">To: </p><p class="email-to"></p></li>
+                                        <li><p class="bold-text">Subject: </p><p class="email-subject"></p></li>
+                                        <li><p class="email-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus distinctio, facere quis suscipit non voluptatibus commodi animi cupiditate tenetur eius ex totam! Eos aspernatur, voluptas tempora molestias similique quos repellat.</p></li>
+                                        <li class="time-li"><p class="bold-text">Time: </p><p class="email-date"></p></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="table-body">
+                        <tr class="email-content">
+                            <td class="from"><span class="mail-icon"><img src="./assets/icon_mail_sp.svg" alt="mail icon"></span><p>Pablo-Diego-Jose-Francisco@example.com</p></td>
+                            <td class="to"><div class="recipient"><p class="overflow">Pablo-Diego-Jose-Francisco@example.com</p></div></td>
+                            <td class="subject">[info:888] ABC EQUIPMENT COMPANY</td>
+                            <td class="date">2019/12/31<span class="right-arrow"><img src="./assets/icon_arrow02.svg" alt="right arrow icon"></span></td>
+                        </tr>
+                        <tr class="email-body">
+                            <td colspan="4">
+                                <div class="email-body-text">
+                                    <ul>
+                                        <li><p class="bold-text">From: </p><p class="email-from"></p></li>
+                                        <li><p class="bold-text">To: </p><p class="email-to"></p></li>
+                                        <li><p class="bold-text">Subject: </p><p class="email-subject"></p></li>
+                                        <li><p class="email-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut iusto quasi perferendis quibusdam obcaecati, porro repudiandae? Omnis id labore, accusantium assumenda tenetur molestiae, ab iure magnam animi laboriosam nulla accusamus!</p></li>
+                                        <li class="time-li"><p class="bold-text">Time: </p><p class="email-date"></p></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="table-body">    
+                        <tr class="email-content">
+                            <td class="from"><span class="mail-icon"><img src="./assets/icon_mail_sp.svg" alt="mail icon"></span><p>ggg@example.com</p></td>
+                            <td class="to"><div class="recipient"><p class="overflow">ppp@example.com</p></div></td>
+                            <td class="subject">Re: [Github] Brush-up on loading animation</td>
+                            <td class="date">Jan 01<span class="right-arrow"><img src="./assets/icon_arrow02.svg" alt="right arrow icon"></span></td>
+                        </tr>
+                        <tr class="email-body">
+                            <td colspan="4">
+                                <div class="email-body-text">
+                                    <ul>
+                                        <li><p class="bold-text">From: </p><p class="email-from"></p></li>
+                                        <li><p class="bold-text">To: </p><p class="email-to"></p></li>
+                                        <li><p class="bold-text">Subject: </p><p class="email-subject"></p></li>
+                                        <li><p class="email-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, impedit quas recusandae illum quam sed ipsam dicta iure similique! Pariatur fugit dolorem accusamus molestiae consequatur ullam assumenda illo voluptas reiciendis!</p></li>
+                                        <li class="time-li"><p class="bold-text">Time: </p><p class="email-date"></p></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="table-body">
+                        <tr class="email-content"> 
+                            <td class="from"><span class="mail-icon"><img src="./assets/icon_mail_sp.svg" alt="mail icon"></span><p>hhh.hhhh@example.com</p></td>
+                            <td class="to"><div class="recipient"><p class="overflow">ooo.ooo@example.com</p></div></td>
+                            <td class="subject">Workplace Summary for sample, Inc.: Jun 2 - Jun 9</td>
+                            <td class="date"><span class="clip"><img src="./assets/icon_clip.svg" alt="clip icon"></span>Jan 01<span class="right-arrow"><img src="./assets/icon_arrow02.svg" alt="right arrow icon"></span></td>
+                        </tr>
+                        <tr class="email-body">
+                            <td colspan="4">
+                                <div class="email-body-text">
+                                    <ul>
+                                        <li><p class="bold-text">From: </p><p class="email-from"></p></li>
+                                        <li><p class="bold-text">To: </p><p class="email-to"></p></li>
+                                        <li><p class="bold-text">Subject: </p><p class="email-subject"></p></li>
+                                        <li><p class="email-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi officia ea maxime fuga. Facere, error non explicabo vero cupiditate dolorum suscipit optio, voluptate inventore sint omnis possimus quod in illo.</p></li>
+                                        <li class="time-li"><p class="bold-text">Time: </p><p class="email-date"></p></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    
+                    <tbody class="table-body">
+                        <tr class="email-content">
+                            <td class="from"><span class="mail-icon"><img src="./assets/icon_mail_sp.svg" alt="mail icon"></span><p>iii@example.com</p></td>
+                            <td class="to"><div class="recipient"><p class="overflow">nnn@example.com</p></div></td>
+                            <td class="subject">I love you</td>
+                            <td class="date"><span class="clip"><img src="./assets/icon_clip.svg" alt="clip icon"></span>2019/12/31<span class="right-arrow"><img src="./assets/icon_arrow02.svg" alt="right arrow icon"></span></td>
+                        </tr>
+                        <tr class="email-body">
+                            <td colspan="4">
+                                <div class="email-body-text">
+                                    <ul>
+                                        <li><p class="bold-text">From: </p><p class="email-from"></p></li>
+                                        <li><p class="bold-text">To: </p><p class="email-to"></p></li>
+                                        <li><p class="bold-text">Subject: </p><p class="email-subject"></p></li>
+                                        <li><p class="email-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi omnis quas repellat voluptatibus? Voluptas distinctio laborum cumque accusantium, sit est voluptatem dolorum, hic fuga vel aut iure, dignissimos libero autem.</p></li>
+                                        <li class="time-li"><p class="bold-text">Time: </p><p class="email-date"></p></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    
+                    
+                </table>
+                <div class="empty-email hidden">
+                    <img src="./assets/logo.png" alt="email archiever icon">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        //initializing date picker with jquery
+        $('#date-picker').daterangepicker({
+            locale: {
+                format: 'YYYY/MM/DD'
+            }
+        })
+    </script>
+</body>
+</html>
